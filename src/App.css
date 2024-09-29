@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  background: radial-gradient(circle, #e74d26, #f19c5b);
+
+
+
+}
+
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้เนื้อหาอยู่ตรงกลาง */
+}
+.products-container {
+  width: 90%; /* ความกว้างเดิม */
+  margin-right: 410px; /* เพิ่มระยะห่างจาก shopping cart (ควรมากกว่าความกว้างของ cart-items-container) */
+  padding: 50px;
+  margin-left: 100px;
+  
+}
+
+
+.cart-items-container {
+  position: fixed; /* Fix position to the right */
+  top: 20px; /* Offset from the top */
+  right: 10px; /* Offset from the right */
+  max-width: 300px; /* Set a fixed width for the cart */
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 40px); /* Full height minus offsets */
+  overflow-y: auto; /* Allow scrolling if the cart items overflow */
+}
+
+.product-item, .cart-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  padding: 20px;
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  transition: box-shadow 0.3s; /* Smooth hover effect */
+  flex: 0 1 20%;
+  margin: 2%;
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.item-image {
+  width: 30%; /* Set a fixed width for the image */
+  margin-right: 15px; /* Add space between the image and details */
+}
+
+.item-image img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded image corners */
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Make details take full width */
+}
+
+.item-details p {
+  margin: 5px 0; /* Add space between text elements */
+}
+
+.add-to-cart, .remove-item {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  margin: 50%;
+  cursor: pointer;
+  border-radius: 500px;
+  transition: background-color 0.3s; /* Smooth button hover effect */
+}
+
+.add-to-cart:hover, .remove-item:hover {
+  background-color: #3700b3; /* Darker shade on hover */
+ 
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.item-quantity button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.item-quantity .quantity {
+  padding: 0 10px;
+}
+
+.order-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+#checkout-btn {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s; /* Smooth button hover effect */
+}
+
+#checkout-btn:hover {
+  background-color: #3700b3; /* Darker shade on hover */
+}
+.store-header {
+  text-align: center; /* จัดให้อยู่ตรงกลาง */
+  background-color: #fefefe; /* ใส่สีพื้นหลังที่ต้องการ */
+  color: rgb(235, 116, 19); /* ใส่สีของข้อความ */
+  padding: 20px; /* เพิ่มพื้นที่ด้านใน */
+  font-size: 2em; /* กำหนดขนาดข้อความ */
+  position: relative; /* ใช้ position เพื่อจัดวาง */
+}
+
+.remove-item {
+  width: 60px; /* กำหนดความกว้าง */
+  height: 60px; /* กำหนดความสูง */
+  padding: 0; /* ปรับ padding ให้น้อยลง */
+  font-size: 1.2em; /* ปรับขนาดตัวอักษรให้เหมาะสม */
+}
